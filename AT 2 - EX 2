@@ -1,0 +1,22 @@
+
+def calcular_financiamento(preco, entrada, parcelas):
+
+    taxa = 0.015
+    valor_financiado = preco - entrada
+    valor_total = valor_financiado * (1 + taxa * parcelas)
+    parcela = valor_total / parcelas
+
+    return parcela
+
+
+preco = 80000
+print("Preço do veículo:", preco)
+
+entrada = 20000
+parcelas = 48
+
+if parcelas > 72:
+    print("Número máximo de parcelas é 72.")
+else:
+    valor = calcular_financiamento(preco, entrada, parcelas)
+    print("Valor da parcela:", round(valor, 2))
