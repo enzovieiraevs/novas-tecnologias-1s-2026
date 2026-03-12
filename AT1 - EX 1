@@ -1,0 +1,30 @@
+# novas-tecnologias-1s-2026
+Repositório de código da disciplina Novas Tecnologias
+
+veiculos = []
+
+veiculos.append({"marca": "Toyota", "modelo": "Corolla", "preco": 120000, "ano": 2022})
+veiculos.append({"marca": "Honda", "modelo": "Civic", "preco": 110000, "ano": 2021})
+veiculos.append({"marca": "Ford", "modelo": "Ka", "preco": 55000, "ano": 2019})
+veiculos.append({"marca": "Chevrolet", "modelo": "Onix", "preco": 70000, "ano": 2020})
+veiculos.append({"marca": "Hyundai", "modelo": "HB20", "preco": 65000, "ano": 2021})
+
+print("Veiculos cadastrados:")
+
+for v in veiculos:
+    print(v["marca"], v["modelo"], "-", v["preco"])
+
+soma = 0
+
+for v in veiculos:
+    soma = soma + v["preco"]
+
+media = soma / len(veiculos)
+
+print("\nPreço médio dos veículos:", media)
+
+print("Veículos acima da média:")
+
+for v in veiculos:
+    if v["preco"] > media:
+        print(v["marca"], v["modelo"], "-", v["preco"])
